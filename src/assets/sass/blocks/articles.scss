@@ -1,0 +1,37 @@
+.articles_item {
+  width: 100%;
+}
+
+.articles_name{
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: $white;
+  padding: 0 3rem;
+
+  @media (max-width: $mobile-bp) {
+    font-size: 2rem;
+  }
+}
+
+.articles_name.img {
+  padding-top: 2rem;
+}
+
+.articles_text {
+  color: $white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.7;
+
+  @media (max-width: $mobile-bp) {
+    font-size: 1.2rem;
+  }
+}
+
+.articles_text.img {
+  padding: 3rem;
+
+  @media (max-width: $mobile-bp) {
+    padding: 1.5rem 3rem;
+  }
+}

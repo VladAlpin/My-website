@@ -1,0 +1,170 @@
+.modal {
+  position:fixed;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 100;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background-color: rgba($black, .9);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    &.show {
+      margin-top: -45px;
+    }
+  }
+}
+
+.modal_close {
+  display: flex;
+  margin-top: 15px;
+  margin-right: 15px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+}
+
+.modal_item {
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  z-index: 100;
+  background-color: $darkGray;
+  box-shadow: 0px 0px 15px -1px #101010;
+  transform: translateY(-200px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal.show .modal_item {
+  transform: translateY(0);
+}
+
+.modal_icon {
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $mobile-bp) {
+      padding: 10px 20px;
+  }
+}
+
+.modal_soc {
+  display: flex;
+  margin: 0.5rem 0;
+  align-items: center;
+  text-decoration: none;
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+
+    @media (max-width: $mobile-bp) {
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: $white;
+    text-decoration: none;
+    margin-left: 0.5rem;
+
+    @media (max-width: $mobile-bp) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.modal_text {
+  font-size: 0.9rem;
+  color: $white;
+  opacity: 0.5;
+
+  p {
+    position: absolute;
+    margin: 0;
+  }
+}
+
+// gmail
+
+.modalGmail {
+  position:fixed;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  top:0px;
+  left:0px;
+  z-index: 100;
+  width:100vw;
+  height:100vh;
+  background-color: rgba($black, .9);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    &.show {
+      margin-top: -45px;
+    }
+  }
+}
+
+.modalGmail_item {
+  position: absolute;
+  display: flex;
+  background-color: $darkGray;
+  box-shadow: 0px 0px 15px -1px #101010;
+  border-radius: 8px;
+  padding: 20px 40px;
+  transform: translateY(-200px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modalGmail.active .modalGmail_item {
+  transform: translateY(0);
+}
+
+.modalGmail_soc {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+  }
+}
+
+.modalGmail_soc p {
+  font-size: 2rem;
+  color: $white;
+  margin-left: 0.5rem;
+}

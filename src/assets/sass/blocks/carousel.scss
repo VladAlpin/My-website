@@ -1,0 +1,47 @@
+.carousel-container {
+  width: 100%;
+  margin-bottom: 5rem;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-window {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-all-pages-container {
+  height: 100%;
+  display: flex;
+
+  transition: translate;
+  transition-property: transform;
+  // transition-duration: 1s;
+}
+
+.carousel_img {
+  max-height: 400px;
+  max-width: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel_arrow-left {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+}
+
+.carousel_arrow-right {
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+}
+
+// .carousel_width {
+//   width: 100%;
+// }

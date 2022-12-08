@@ -1,0 +1,265 @@
+.sidebar {
+  display: flex;
+  position: fixed;
+  width: $sidebar-size;
+  background-color: $darkGray;
+  box-shadow: 0px 5px 10px $black;
+  z-index: 1;
+  height: 100vh;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
+
+  @media (max-width: $tablet-bp) {
+    width: $sidebar-size1230;
+    z-index: 2;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    transform: translateX(-100%);
+    // overflow: auto;
+    transition: transform .2s linear ;
+    position: fixed;
+    height: 100%;
+
+    .show-sidebar & {
+      transform: translateX(0);
+      z-index: 1;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray;
+    border-radius: 20px;
+  }
+}
+
+.sidebar_item {
+  @media (max-width: $tablet-bp) {
+    width: $sidebar-size1230;
+  }
+}
+
+.sidebar_img {
+  width: $sidebar-size;
+  filter: brightness(95%);
+
+  @media (max-width: $tablet-bp) {
+    width: $sidebar-size1230;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    height: 11rem;
+  }
+}
+
+.sidebar_contant {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  margin-top: -7rem;
+  z-index: 2;
+
+  @media (max-width: $tablet-bp) {
+    margin-top: -5rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    margin-top: -2rem;
+    justify-content: flex-start;
+  }
+}
+
+.sidebar_my {
+  background-color: $black;
+  border-radius: 50%;
+  border: 2px solid $black;
+  width: 12rem;
+  height: 12rem;
+
+  @media (max-width: $tablet-bp) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    height: 6rem;
+    width: 6rem;
+    margin-left: 1rem;
+  }
+}
+
+.sidebar_imi {
+  width: 100%;
+
+  @media (max-width: $tabletMin-bp) {
+    margin-top: -6rem;
+  }
+}
+
+.sidebar_name {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-top: 1.6rem;
+
+  @media (max-width: $tablet-bp) {
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+  }
+}
+
+.sidebar_devoloper {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: $tablet-bp) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    margin-bottom: 1.5rem;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+  }
+}
+
+.sidebar_icon {
+  display: flex;
+  justify-content: center;  
+
+  @media (max-width: $tabletMin-bp) {
+    display: none;
+  }
+}
+
+.sidebar_soc {
+  margin: 0 0.7rem;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: 0.2s ease-in-out;
+  height: 40px;
+  width: 40px;
+  
+  img {
+    border-radius: 5px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.sidebar_mastab {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $tabletMin-bp) {
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+    margin-left: 2rem;
+  }
+}
+
+.sidebar_linear {
+  margin-top: 3rem;
+  width: 22rem;
+  border: 1px solid #000000;
+  opacity: 0.4;
+
+  @media (max-width: $tablet-bp) {
+    width: 19rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.sidebar_anatation {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $white;
+  margin: 3rem 2rem 3rem 2rem;
+  text-align: center;
+
+  @media (max-width: $tablet-bp) {
+    margin: 2.5rem 1rem 2.5rem 1rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    display: none;
+  }
+}
+
+.sidebar_botton {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: $white;
+  text-align: center;
+  width: 17rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px $blue;
+  transition: 0.3s;
+  margin-bottom: 5rem;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 3px $blue;
+  }
+
+  @media (max-width: $tablet-bp) {
+    width: 14rem;
+  }
+
+  @media (max-width: $tabletMin-bp) {
+    padding: 1rem;
+    font-size: 1.4rem;
+    width: 12rem;
+  }
+}
+
+.sidebar_mobile {
+  display: none;
+
+  @media (max-width: $tabletMin-bp) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+  }
+}
+
+.sidebar_a {
+  @media (max-width: $tabletMin-bp) {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    color: $white;
+    text-decoration: none;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+

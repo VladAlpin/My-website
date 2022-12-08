@@ -1,0 +1,43 @@
+.about_item {
+  width: 100%;
+}
+
+.about_name {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: $white;
+  padding-bottom: 0;
+
+  @media (max-width: $mobile-bp) {
+    font-size: 2rem;
+  }
+}
+
+.about_text {
+  margin-top: 3rem;
+  color: $white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.7;
+
+  @media (max-width: $mobile-bp) {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+.about_soc {
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  margin-top: 3rem;
+}
+
+.about_center {
+  display: flex;
+  margin: auto 0;
+}
+
+.about_padvinut {
+  margin-left: 15px;
+}
